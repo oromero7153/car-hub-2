@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
-        <img src="PLACEMENTLOGO.jpg" alt="Car Hub Logo Image" />
+      <p>&copy;2023 - carHub</p>
     </footer>
   );
 }

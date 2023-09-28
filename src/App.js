@@ -1,6 +1,6 @@
-import './App.css';
+import "./App.css";
 import Header from "./components/Header";
-import Container from './components/Container';
+import Container from "./components/Container";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -10,13 +10,13 @@ function App() {
       <div className="App">
         <Header />
         <Container />
-        <Footer />
         <Routes>
-          {/* <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Container />} />
           <Route path="/rides" element={<Rides />} />
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} /> */}
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
