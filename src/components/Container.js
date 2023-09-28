@@ -3,12 +3,17 @@ import "./container.css";
 
 function Container() {
   return (
-    <div className="Container">
+    <div className="mainContainer">
       <div className="hero">
-        <img src="PlacementHeroImage.jpg" alt="Hero Image Alt Text"/>
       </div>
-      <div className="container"></div>
-      <div className="container"></div>
+      <div className="container-wrapper">
+        <div className="container">
+          
+        </div>
+        <div className="container">
+          
+        </div>
+      </div>
     </div>
   );
 }
