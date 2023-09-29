@@ -18,13 +18,11 @@ Check in on news and sweepstakes!
 
 ## Technologies Used
 
-- **Frontend**:
+### Frontend
+- React
+- HTML/CSS
+- JavaScript
 
- - React
- - HTML/CSS
- - Javascript
-
-- **Backend**:
-
- - Node.js
- - MongoDB
+### Backend
+- Node.js
+- MongoDB
