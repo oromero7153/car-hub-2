@@ -7,9 +7,9 @@ function ridesExpanded () {
     return (
         <div>
         <main>
-            <header></header>
+            <Header />
             <h1></h1>
-            <footer></footer>
+            <Footer />
         </main>
         </div>
     )
