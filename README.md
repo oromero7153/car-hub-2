@@ -1,15 +1,28 @@
-# Car Hub Blog
+# MERN Carhub Application
 
-Welcome to Car Hub!
+Welcome to Carhub! 
 
-## About Car Hub
+## About Carhub
 
-Car Hub is...
+Carhub is a social media site for cars. 
+Show off your car and become featured. 
+Check in on news and sweepstakes!
 
 ## Features
 
-- **Coming**
+- Full CRUD blog interface
 
 ## How to Use
 
 - **Coming**
+
+## Technologies Used
+
+### Frontend
+- React
+- HTML/CSS
+- JavaScript
+
+### Backend
+- Node.js
+- MongoDB
