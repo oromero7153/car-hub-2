@@ -1,26 +1,58 @@
 export const EventDates = [
     {
-        imageURL: '/assets/sick_civic.jpeg',
-        title: "Car For Sale",
-        description: "Dope 1989 Honda Civic on 22\" rims, don't waste my time I know what I have",
-        price: '$3000'
+        imageURL: 'https://www.topgear.com/sites/default/files/news-listicle/image/jap1_196.jpg',
+        EventName: "BridgeFest",
+        Location: "East Los Angeles, California",
+        Date: '10/26/2023'
+        // credit to TopGear.com for the picture// 
     },
     {
-        imageURL: '/assets/piranha.jpeg',
-        title: 'Piranhas',
-        description: 'I didn\'t know these little guys were carnivorous and now my cats upset',
-        price: '$25',
+        imageURL: 'https://assets.rebelmouse.io/media-library/musclepalooza-xv.jpg?id=31567296&width=1200&height=800&quality=90&coordinates=94%2C0%2C0%2C0',
+        EventName: 'Muscle Palooza',
+        Location: 'Lebanon, New York',
+        Date: '10/31/23',
+        //credit to Hemings.com for the picture//
     },
     {
-        imageURL: '/assets/water_temple.jpeg',
-        title: 'Need help beating the Water Temple',
-        description: 'Everyone told me it would be hard but I literally cannot adjust the water levels one more time without going insane',
-        price: 'You name it, I\'ll pay it'
+        imageURL: 'https://petrolheadsautocom.files.wordpress.com/2018/01/a9844fd1152527b59e67d0e1f76e0717.jpg',
+        EventName: 'Petrol Heads',
+        Location: 'Whittier, California',
+        Date: '11/8/23'
+        //credit to petrolheadsauto.com for the picture//
     },
     {
-        imageURL: '/assets/dirty_dancing_vhs.jpeg',
-        title: 'Buying a VHS player',
-        description: 'You have no idea how hard it is to find a VHS player these days and I have this VHS of dirty dancing from 1987 and I just need to escape to the Catskills with Patrick Swayze so badly right now',
-        price: '$6000'
+        imageURL: 'https://www.motorious.com/content/images/2022/06/collection.jpg',
+        EventName: 'Motorious',
+        Location: 'Downtown Los Angeles',
+        Date: '11/11/23'
+        //credit to motorious.com for the picture//
+    },
+    {
+        imageURL: 'https://www.motortrend.com/uploads/sites/3/2020/10/20-ua20-ultimate-adventure-morning-lineup-ua2020.jpg',
+        EventName: "CrawlFest",
+        Location: "Azusa, California",
+        Date: '11/23/23'
+        //credit to motortrend.com for the picture//
+    },
+    {
+        imageURL: 'https://mild2wildrafting.com/wp-content/uploads/2021/02/Moab-Lead.jpg',
+        EventName: 'Rock Crawlers',
+        Location: 'Moab, Utah',
+        Date: '11/30/23',
+        //credit to mild2wildrafting.com//
+    },
+    {
+        imageURL: 'https://images.squarespace-cdn.com/content/v1/6121df7eb3151f3c2afe61d7/1657785325940-4N5LCYILP04JL0KQMANL/2022-07-13-Road-To-El-Dorado-Car-Show-Case-Las-Vegas-Car-Meets-Photography-Vik-Chohan-Photography-Photo-Booth-Social-Media-VCP-001.jpg',
+        EventName: 'SuperPalooza',
+        Location: 'Glendale, California',
+        Date: '12/10/23'
+        //credit to vik chohan for the picture//
+    },
+    {
+        imageURL: 'https://www.motortrend.com/uploads/sites/7/2020/03/Arizona-Car-Clubs-4th-Annual-Picnic-Bomb-Squad-CC.jpg?interpolation=lanczos-none&fit=around%7C1024:680',
+        EventName: 'BombClub',
+        Location: 'Whittier, California',
+        Date: '12/23/23'
+        //credit to motortrend.com for the picture//
     }
 ]
