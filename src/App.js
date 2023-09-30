@@ -9,10 +9,9 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Container />
         <Routes>
-          {/* <Route path="/" element={<Container />} />
-          <Route path="/rides" element={<Rides />} />
+          <Route path="/" element={<Container />} />
+          {/* <Route path="/rides" element={<Rides />} />
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} /> */}
         </Routes>
