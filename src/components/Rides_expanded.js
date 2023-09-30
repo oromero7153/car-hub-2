@@ -28,7 +28,7 @@ function RidesExpanded() {
                     venenatis. Cras enim purus, ultrices vitae mauris nec, euismod commodo sapien.
                     Integer pretium feugiat pretium.
                 </p>
-                                <div className="button">
+                <div className="button">
                     <button onClick={() => navigate('/rides/update')} >Update</button>
                     <button>Delete</button>
                 </div>
