@@ -1,12 +1,16 @@
 import React from "react";
 import "./ridesExpanded.css"
+import maserati from "../assets/rides_expanded/2023-mc20.jpg"
+import Update from "./update";
+import { useNavigate } from "react-router-dom";
 
 function RidesExpanded() {
+    const navigate = useNavigate();
     return (
         <div>
             <main>
                 <div className="car">
-                    <img src="src/assets/rides_expanded/2023-mc20.jpg" />
+                    <img id="maserati" src={maserati} />
                     <div className="car-data">
                         <h1>Maserati M20</h1>
                         <ul>
@@ -24,13 +28,12 @@ function RidesExpanded() {
                     venenatis. Cras enim purus, ultrices vitae mauris nec, euismod commodo sapien.
                     Integer pretium feugiat pretium.
                 </p>
-                <div className="button">
-                    <button type="button">Update</button>
-                    <button type="button">Delete</button>
+                                <div className="button">
+                    <button onClick={() => navigate('/rides/update')} >Update</button>
+                    <button>Delete</button>
                 </div>
             </main>
         </div>
-
     )
 };
 
