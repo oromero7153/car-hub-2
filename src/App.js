@@ -1,6 +1,9 @@
-import './App.css';
+import "./App.css";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes } from "react-router-dom";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
+import EventsPage from "./components/EventsPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -8,7 +11,11 @@ function App() {
       <div className="App">
         <Header/>
         <Routes>
-
+          <Route path="/" element={<Container />} />
+          <Route path="/events" element={<EventsPage />} />
+          {/*<Route path="/rides" element={<Rides />} /> 
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/about" element={<About />} /> */}
         </Routes>
         <Footer />
       </div>
