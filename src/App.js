@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
+import RidesExpanded from "./components/Rides_expanded";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,11 +10,10 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Container />
         <Routes>
-          {/* <Route path="/" element={<Container />} />
-          <Route path="/rides" element={<Rides />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/" element={<Container />} />
+          <Route path="/rides" element={<RidesExpanded />} />
+          {/*<Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} /> */}
         </Routes>
         <Footer />
