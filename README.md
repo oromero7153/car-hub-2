@@ -14,7 +14,7 @@ Check in on news and sweepstakes!
 
 ## How to Use
 
-- **Coming**
+- car-hub-staging.vercel.app
 
 ## Technologies Used
 
