@@ -5,13 +5,13 @@ import { AboutDates } from "./AboutDates";
 import AboutCard from "./AboutCard";
 import { useNavigate } from "react-router-dom";
 
-export default function AboutEvents(props) {
+export default function aboutUs(props) {
 
     const navigate = useNavigate();
 
     return (
         <><div style={{ display: "flex", flexWrap: "wrap" }}>
-            {AboutDates.map((element, index) =>
+            {AboutDate.map((element, index) =>
                 <AboutCard
                     key={index}
                     imageURL={element.imageURL}

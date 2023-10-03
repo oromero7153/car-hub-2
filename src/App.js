@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Container from "./components/Container";
@@ -13,10 +14,10 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          {/* <Route path="/" element={<Container />} />
-          <Route path="/rides" element={<Rides />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/about" element={<About />} /> */}
+          <Route path="/" element={<Container />} />
+          {/* <Route path="/rides" element={<Rides />} />
+          <Route path="/events" element={<Events />} /> */}
+          <Route path="/aboutUs" element={<AboutUs />} />
         </Routes>
         <Footer />
       </div>

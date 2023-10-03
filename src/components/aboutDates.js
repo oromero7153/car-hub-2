@@ -1,4 +1,4 @@
-export const aboutDates = [
+export const AboutDates = [
     {
         imageURL: "./images/bridgefest.jpeg",
         eventName: "BridgeFest",
