@@ -23,7 +23,7 @@ export const EventDates = [
     {
         imageURL: './images/motorious.jpeg',
         eventName: 'Motorious',
-        location: 'Downtown Los Angeles',
+        location: 'Downtown Los Angeles, California',
         date: '11/11/23'
         //credit to motorious.com for the picture//
     },

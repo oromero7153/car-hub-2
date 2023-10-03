@@ -3,10 +3,14 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { EventDates } from "./EventDates";
 import Card from "./Card";
+import { useNavigate } from "react-router-dom";
 
 export default function EventsPage (props) {
+    
+    const navigate= useNavigate();
+
     return (
-        <div style= {{display: "flex", flexWrap: "wrap"}}> 
+        <><div style= {{display: "flex", flexWrap: "wrap"}}> 
             {EventDates.map((element, index) =>
             <Card  
             key= {index} 
@@ -17,5 +21,15 @@ export default function EventsPage (props) {
             />)
         }
         </div>
+        <div>
+            <p>Stay up to date with events! New events will be added soon!</p>
+        </div>
+
+        <div className="button">
+            <p>You can also add your own events here!</p>
+                <button onClick={() => navigate('/events/AddEvent')} >Add Event</button>
+                <button>Delete Event</button>
+        </div>
+        </>
     );
 }
