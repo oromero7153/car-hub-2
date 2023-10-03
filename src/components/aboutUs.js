@@ -1,40 +1,33 @@
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import AboutCard from "./CardAbout";
+import { useNavigate } from "react-router-dom";
+import { aboutDates } from "./aboutDates";
 
-function AboutUs() {
+export default function AboutUs (props) {
+    
+    const navigate= useNavigate();
+
     return (
-        <div>
-            <h1>About Us</h1>
-            <p>Welcome to Car Hub</p>
-            <p>Feel free to explore our website and learn more about us</p>
-
-            <table style={{ border: "1px solid black", width: "500px", height: "700px" }}>
-                <tr>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image1.jpg" alt="Image 1" />
-                    </td>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image2.jpg" alt="Image 2" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image3.jpg" alt="Image 3" />
-                    </td>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image4.jpg" alt="Image 4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image5.jpg" alt="Image 5" />
-                    </td>
-                    <td style={{ border: "1px solid black" }}>
-                        <img src="image6.jpg" alt="Image 6" />
-                    </td>
-                </tr>
-            </table>
+        <><div style= {{display: "flex", flexWrap: "wrap"}}> 
+            {aboutDates.map((element, index) =>
+            <AboutCard  
+            key= {index} 
+            imageURL= {element.imageURL} 
+            eventName={element.eventName} 
+            />)
+        }
         </div>
+        <div>
+            <p>Stay up to date with events! New events will be added soon!</p>
+        </div>
+{/* 
+        <div className="button">
+            <p>You can also add your own events here!</p>
+                <button onClick={() => navigate('/events/AddEvent')} >Add Event</button>
+                <button>Delete Event</button>
+        </div> */}
+        </>
     );
 }
-
-export default AboutUs;
