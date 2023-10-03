@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ".footer.css";
+import "./footer.css";
 
-function Header() {
+function Footer() {
   return (
-<footer>
-    <p>lorem
-        
-    </p>
-</footer>
+    <footer>
+      <p>&copy;2023 - carHub</p>
+    </footer>
   );
 }
 
