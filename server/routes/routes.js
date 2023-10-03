@@ -52,7 +52,7 @@ router.get("/rides/:id", async (req, res) => {
 
 
 // UPDATE ride
-router.post("/rides/:id", async (req, res) => {
+router.post("/:id/update", async (req, res) => {
   try {
     const rideId = req.params.id;
     const updatedRideData = req.body;
