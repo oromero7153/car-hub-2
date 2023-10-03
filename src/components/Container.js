@@ -10,6 +10,7 @@ function Container() {
   return (
     <div className="mainContainer">
       <div className="hero">
+        <div className="hero-bg-wrapper"></div>
         <div className="hero-text">
           <h2>FEATURED CAR</h2>
         </div>
@@ -39,8 +40,12 @@ function Container() {
         </div>
       </div>
       <div className="container-wrapper">
-        <div className="container newsEvents"><h2>News & Events</h2></div>
-        <div className="container giveAway"><h2>Give Away</h2></div>
+        <div className="container newsEvents">
+          <h2>News & Events</h2>
+        </div>
+        <div className="container giveAway">
+          <h2>Give Away</h2>
+        </div>
       </div>
     </div>
   );
