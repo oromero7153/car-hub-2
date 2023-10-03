@@ -1,22 +1,35 @@
 .hero {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url('../assets/banners/hero-image.png');
   background-size: cover;
   background-position: center;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  height: 45vh;
-  display: flex; 
-  align-items: center; 
-  justify-content: flex-start; 
-  position: relative;
+  transition: transform 0.8s ease;
+}
+
+.hero:hover .hero-bg-wrapper {
+  transform: scale(1.04);
 }
 
 .hero-text {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 190px;
+  transform: translate(-50%, -50%);
   padding: 10px 20px;
   color: #fff;
-  z-index: 1; 
+  text-align: center;
+  z-index: 1;
 }
 
 .hero-text h2 {
