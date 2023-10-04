@@ -15,7 +15,6 @@ export default function AboutEvents(props) {
                 <AboutCard
                     key={index}
                     imageURL={element.imageURL}
-
                     location={element.location}
                 />)
             }
