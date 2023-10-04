@@ -15,19 +15,19 @@ export default function AboutEvents(props) {
                 <AboutCard
                     key={index}
                     imageURL={element.imageURL}
-                    eventName={element.eventName}
+
                     location={element.location}
                 />)
             }
         </div>
             <div>
-                <p>Stay up to date with events! New events will be added soon!</p>
+                <p>Stay uo to date witht the Pit Crew of Car-Hub</p>
             </div>
 
             <div className="button">
-                <p>You can also add your own events here!</p>
-                <button onClick={() => navigate('/events/AddEvent')} >Add Event</button>
-                <button>Delete Event</button>
+                <p>Check out Upcoming Events on our Events Page.</p>
+                <button onClick={() => navigate('/events/#')} >Head over to Events</button>
+                {/* <button>Delete Event</button> */}
             </div>
         </>
     );
