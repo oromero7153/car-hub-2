@@ -13,12 +13,43 @@ function Rides() {
     const [owner, setOwner] = useState('')
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        console.log(photo + '|' + brand + '|' + model + '|' + year + '|' + type + '|' + engine + '|' + drivetrain + '|' + owner)
-
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("/rides", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                photo,
+                brand,
+                model,
+                year,
+                type,
+                engine,
+                drivetrain,
+                owner,
+              }),
+            });
+      
+            if (response.ok) {
+              console.log("Ride Posted Successfully");
+              setPhoto("");
+              setBrand("");
+              setModel("");
+              setYear("");
+              setType("");
+              setEngine("");
+              setDrivetrain("");
+              setOwner("");
+            } else {
+              console.error("Failed to post ride");
+            }
+          } catch (error) {
+            console.error(error);
+          }
+        };
 
     return (
         <div>
