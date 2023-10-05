@@ -27,7 +27,7 @@ function AddRides() {
             model: input.model
         }
         
-        axios.post('http://localhost:3001/addrides', newRide)
+        axios.post('http://localhost:4000/addrides', newRide)
     };
 
     return (
