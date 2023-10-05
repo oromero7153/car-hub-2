@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const rides = await schemas.Rides.find();
-    res.status(200).json(rides); 
+    res.status(200).json(rides);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error" });
@@ -54,13 +54,16 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-
 // UPDATE ride
 router.post("/:id/update", async (req, res) => {
   try {
     const rideId = req.params.id;
-    const updatedRideData = req.body;
-    res.status(200).json(updatedRideData);
+    const updatedRide = await schemas.Rides.findByIdAndUpdate(
+      rideId,
+      updatedRideData,
+      { new: true }
+    );
+    res.status(200).json(updatedRide);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error updating" });

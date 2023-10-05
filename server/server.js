@@ -19,7 +19,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use("/submit-rides", router);
+app.use("/submit_rides", router);
 
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.connect(process.env.MONGO_URI, dbOptions);

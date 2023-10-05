@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./rides.css";
 
 function Rides() {
   const [rides, setRides] = useState([]);
@@ -7,10 +8,16 @@ function Rides() {
   useEffect(() => {
     const fetchRides = async () => {
       try {
-        const response = await fetch("http://localhost:5000/rides");
+        const response = await fetch("http://localhost:5000/submit_rides");
         if (response.ok) {
           const data = await response.json();
-          setRides(data);
+          const ridesWithPlaceholders = data.map((ride) => {
+            if (!ride.photo) {
+              return { ...ride, photo: "https://placekitten.com/200/200" };
+            }
+            return ride;
+          });
+          setRides(ridesWithPlaceholders);
         } else {
           console.error("Failed to fetch rides");
         }
@@ -23,22 +30,21 @@ function Rides() {
   }, []);
 
   return (
-    <div>
+    <div className="rides-container">
       <h1>Rides</h1>
-      <ul>
+      <ul className="rides-list">
         {rides.map((ride) => (
-          <li key={ride._id}>
+          <li className="ride-item" key={ride._id}>
+            <Link to={`/rides/${ride._id}`} className="navLink">
             <img src={ride.photo} alt={`${ride.brand} ${ride.model}`} />
-            <p>
-              <strong>
-                {ride.brand} {ride.model}
-              </strong>{" "}
-              ({ride.year})
-            </p>
+            <p>Brand: {ride.brand}</p>
+            <p>Model: {ride.model}</p>
+            <p>Year: {ride.year}</p>
             <p>Type: {ride.type}</p>
             <p>Engine: {ride.engine}</p>
             <p>Drivetrain: {ride.drivetrain}</p>
             <p>Owner: {ride.owner}</p>
+            </Link>
           </li>
         ))}
       </ul>
