@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
-import RidesExpanded from "./components/Rides_expanded";
-import Update from "./components/update"
+// import RidesExpanded from "./components/Rides_expanded";
+// import Update from "./components/update"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./components/aboutUs";
 

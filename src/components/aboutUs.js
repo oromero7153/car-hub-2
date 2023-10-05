@@ -10,7 +10,7 @@ export default function AboutEvents(props) {
     const navigate = useNavigate();
 
     return (
-        <><div style={{ display: "flex", flexWrap: "wrap" }}>
+        <><div style={{ display: "flex", flexWrap: "wrap", justifyContent:"center" }}>
             {AboutDates.map((element, index) =>
                 <AboutCard
                     key={index}
