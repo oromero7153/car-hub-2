@@ -21,7 +21,7 @@ app.use(cors(corsOptions));
 
 app.use("/rides", router);
 
-const dbOptions = { useNewUrlPArser: true, useUnifiedTopology: true };
+const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.connect(process.env.MONGO_URI, dbOptions);
 
 const PORT = process.env.PORT || 5000;

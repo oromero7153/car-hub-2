@@ -3,7 +3,7 @@ const router = express.Router();
 const schemas = require("../models/schemas");
 
 // POST ride
-router.post("/rides", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { photo, brand, model, year, type, engine, drivetrain, owner } =
       req.body;
@@ -29,7 +29,7 @@ router.post("/rides", async (req, res) => {
 });
 
 // GET ride
-router.get("/rides", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const rides = await schemas.Rides.find();
     res.status(200).json(rides); 
@@ -40,10 +40,14 @@ router.get("/rides", async (req, res) => {
 });
 
 // GET ride by ID
-router.get("/rides/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const rideId = req.params.id;
-    res.status(200).json(rideData);
+    const ride = await schemas.Rides.findById(rideId);
+    if (!ride) {
+      return res.status(404).json({ error: "Ride not found" });
+    }
+    res.status(200).json(ride);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error" });
@@ -64,7 +68,7 @@ router.post("/:id/update", async (req, res) => {
 });
 
 //DELETE ride
-router.delete("/rides/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const rideId = req.params.id;
     res.status(200).json({ message: "Ride deleted" });
@@ -73,6 +77,5 @@ router.delete("/rides/:id", async (req, res) => {
     res.status(500).json({ error: "Error deleting" });
   }
 });
-
 
 module.exports = router;
