@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const ridesSchema = new Schema({
- photo: { type: String, required: true},  
+ photo: { type: String},  
  brand: { type: String, required: true },
  model: { type: String, required: true},
  year: { type: Number, required: true},
@@ -13,5 +13,7 @@ const ridesSchema = new Schema({
 });
 
 const Rides = mongoose.model('Rides', ridesSchema, 'rides');
+
+const mySchemas = {'Rides': Rides}
 
 module.exports = mySchemas
