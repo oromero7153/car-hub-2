@@ -1,28 +1,16 @@
-require('dotenv/config');
-
-const mongoose = require('mongoose')
 const express = require('express');
-const cors = require('cors')
-const bodyParser = require('body-parser');
-const router = require('./routes/routes')
-
 const app = express();
+const cors = require('cors');
+const mongoose = require('mongoose')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(cors());
+app.use(express.json())
 
-const corsOptions = {
-    origin: '*',
-    credentials: true, 
-    optionSuccessStatus: 200
-}
+mongoose.connnect('mongodb+srv://oromero7153:HaqihnOopgXJbHnO@rest-rant.kxwtiyy.mongodb.net/carhub?retryWrites=true&w=majority')
 
-app.use(cors(corsOptions))
+app.use('/', require("./routes/addRideRoute"));
 
-app.use('/', router)
+app.listen(3001, function(){
+    console.log('express server is running on port 3001')
+})
 
-const dbOptions = {useNewUrlPArser: true, useUnifiedTopology: true}
-mongoose.connect(process.env.DB_URI, dbOptions)
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

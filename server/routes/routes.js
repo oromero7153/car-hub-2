@@ -1,9 +1,10 @@
+/*
 const express = require("express");
 const router = express.Router();
 const schemas = require("../models/schemas");
 
 // POST ride
-router.post("/rides", async (req, res) => {
+router.post("/addrides", async (req, res) => {
   try {
     const { photo, brand, model, year, type, engine, drivetrain, owner } =
       req.body;
@@ -74,5 +75,5 @@ router.delete("/rides/:id", async (req, res) => {
   }
 });
 
-
 module.exports = router;
+*/
