@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Rides() {
+function AddRides() {
 
     const [photo, setPhoto] = useState('')
     const [brand, setBrand] = useState('')
@@ -95,4 +95,4 @@ function Rides() {
     )
 }
 
-export default Rides;
+export default AddRides;

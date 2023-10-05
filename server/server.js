@@ -6,7 +6,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 const router = require('./routes/routes')
 
-const app = express('express');
+const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}))
@@ -19,7 +19,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 
-app.use('/rides', router)
+app.use('/', router)
 
 const dbOptions = {useNewUrlPArser: true, useUnifiedTopology: true}
 mongoose.connect(process.env.DB_URI, dbOptions)
